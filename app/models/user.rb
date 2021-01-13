@@ -364,8 +364,8 @@ class User < ApplicationRecord
   end
 
   # methods for Administrate field
-  def banned
-    has_role? :banned
+  def suspended
+    has_role? :suspended
   end
 
   def warned
@@ -407,8 +407,8 @@ class User < ApplicationRecord
     end
   end
 
-  def comment_banned
-    has_role? :comment_banned
+  def comment_suspended
+    has_role? :comment_suspended
   end
 
   def workshop_eligible?

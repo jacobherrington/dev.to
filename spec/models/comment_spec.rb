@@ -413,7 +413,7 @@ RSpec.describe Comment, type: :model do
     it "does no suspend user if only single vomit" do
       comment.body_markdown = "This post is about Yahoomagoo gogo"
       comment.save
-      expect(comment.user.banned).to be false
+      expect(comment.user.suspended).to be false
     end
 
     it "suspends user with 3 comment vomits" do
@@ -424,7 +424,7 @@ RSpec.describe Comment, type: :model do
       comment.save
       second_comment.save
       third_comment.save
-      expect(comment.user.banned).to be true
+      expect(comment.user.suspended).to be true
       expect(Note.last.reason).to eq "automatic_suspend"
     end
 
