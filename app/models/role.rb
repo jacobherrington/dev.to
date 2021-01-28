@@ -1,18 +1,18 @@
 class Role < ApplicationRecord
   ROLES = %w[
     admin
-    suspended
     chatroom_beta_tester
     codeland_admin
     comment_suspended
+    mod_relations_admin
     podcast_admin
     pro
     restricted_liquid_tag
     single_resource_admin
     super_admin
-    tag_moderator
-    mod_relations_admin
     support_admin
+    suspended
+    tag_moderator
     tech_admin
     trusted
     warned
